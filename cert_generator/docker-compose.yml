@@ -1,0 +1,10 @@
+services:
+  mqtt:
+    image: mqtt_secure:latest
+    # command: bash -c "sleep infinity"
+    command: bash -c "mosquitto -c /etc/mosquitto/conf.d/mosquitto.conf"
+    ports:
+    - 1883:1883
+    - 8883:8883
+    hostname: mqtt
+    container_name: mqtt
