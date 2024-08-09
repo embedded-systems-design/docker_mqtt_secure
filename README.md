@@ -10,3 +10,4 @@
 
 create a passphrase file
 create a MY_IP variable
+create a MY_NAME variable
