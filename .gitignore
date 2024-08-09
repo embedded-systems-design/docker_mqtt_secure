@@ -1,5 +1,5 @@
 mqtt/data*
 mqtt/log*
 cert_generator/certs**
-cert_generator/passphrase.txt
+passphrase.txt
 # ntp/
