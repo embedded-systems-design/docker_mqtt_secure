@@ -8,8 +8,8 @@ WORKDIR /certs
 
 RUN apt update && apt install -y git
 
-RUN echo "my ip: $MY_IP" && echo "my name: $MY_NAME"
-ENV subjectAltName='DNS.1:$MY_NAME,DNS.2:$MY_IP,IP.1:$MY_IP'
+ARG subjectAltName
+ENV subjectAltName=$subjectAltName
 
 RUN git clone https://github.com/embedded-systems-design/external_mosquitto_ca_and_certs.git 
 WORKDIR /certs/external_mosquitto_ca_and_certs 
