@@ -7,7 +7,12 @@
 * <https://stackoverflow.com/questions/4294689/how-to-generate-an-openssl-key-using-a-passphrase-from-the-command-line>
 * <https://stackoverflow.com/questions/44047315/generate-a-self-signed-certificate-in-docker>
 * <https://stackoverflow.com/questions/25292198/docker-how-can-i-copy-a-file-from-an-image-to-a-host>
+* <https://stackoverflow.com/questions/25292198/docker-how-can-i-copy-a-file-from-an-image-to-a-host>
 
 create a passphrase file
-create a MY_IP variable
-create a MY_NAME variable
+docker build -t mqtt_secure . --build-arg subjectAltName="DNS.1:$MY_NAME,DNS.2:$MY_IP,IP.1:$MY_IP"
+
+security groups
+
+docker build -t mqtt_secure . --build-arg subjectAltName="DNS.1:$MY_NAME,DNS.2:$MY_IP,IP.1:$MY_IP"
+./get_cert.bash 
